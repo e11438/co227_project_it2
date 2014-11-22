@@ -5,6 +5,4 @@ co227_project
  
 is a testing step
 
-dsdadsdddddddddddddddddddddddsssssssssss
-dsdsadsadasdsa
-sadasdasd
+
