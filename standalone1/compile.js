@@ -5,14 +5,26 @@ function copyEditor(){
 			mySplitResult = strInput.split("\n");
 			document.getElementById("outputText").innerHTML =  mySplitResult.join(" ");
 		*/
+	
+		//var lines = $('#formContent').val().split(/\n/);
+		var parts = $('#formContent').val().split(/.data/);
 		
-		var lines = $('#formContent').val().split(/\n/);
+		commands=parts[0];
+		data =parts[1];
+		
+		var dataArray=data.split(/\n/);
 		var texts = [];
-		for (var i=0; i < lines.length; i++) {
+		for (var i=0; i < dataArray.length; i++) {
 		  // only push this line if it contains a non whitespace character.
-		  if (/\S/.test(lines[i])) {
-			texts.push($.trim(lines[i]));
+		  if (/\S/.test(dataArray[i])) {
+			texts.push($.trim(dataArray[i]));
 		  }
 		}
-		document.getElementById("outputText").innerHTML =  texts.join("\n");
+		document.getElementById("outputText").innerHTML = texts.join('\n');
+		
+	
+		//var myHash = new Hash('one', 'sdsfd', 'two', 'dfdf', 'three','ererer');
+		//document.getElementById("outputText").innerHTML =myHash.getItem('one');		
+		
 }
+
